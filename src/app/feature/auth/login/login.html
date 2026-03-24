@@ -1,0 +1,59 @@
+<div class="h-dvh flex justify-center items-center">
+    <div class=" w-xl">
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="mb-9">
+                <h3 class="text-3xl font-bold">Login</h3>
+            </div>
+            <div class="mb-5">
+                <label for="email" class="block mb-2.5 text-sm  font-medium text-heading">Username</label>
+                <input type="email" id="name" formControlName="email" [class.border-danger]="isInvalid('email')"
+                    class="bg-transparent border   text-heading text-sm rounded-none focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                    placeholder="user123" required />
+                @if(loginForm.get("email")?.getError('required')&& loginForm.get('email')?.touched){
+
+                <p class="mt-2.5 text-sm text-fg-danger"><span class="font-medium">Your username is required</span></p>
+                }
+            </div>
+            <div class="mb-2.5">
+                <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Password</label>
+                <input type="password" id="password" formControlName="password"
+                    [class.border-danger]="isInvalid('password')"
+                    class="bg-transparent border  text-heading text-sm rounded-none focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                    placeholder="*********" required />
+                @if(loginForm.get("password")?.getError('required') && loginForm.get('password')?.touched){
+
+                <p class="mt-2.5 text-sm text-fg-danger"><span class="font-medium">Your Password is required</span></p>
+                }
+            </div>
+            <label for="remember" class="flex items-center mb-15 ">
+
+                <p class="text-end w-full text-sm font-medium text-heading select-none"><a href="#"
+                        class="text-fg-brand hover:underline">Forgot your password?</a></p>
+            </label>
+            @if(loginForm.invalid && (loginForm.touched || loginForm.dirty)){
+            <div class="w-full bg-danger-medium border border-danger my-10 relative">
+
+                <img class="absolute left-1/2 -translate-x-1/2  -translate-y-1/2 bg-danger-medium "
+                    src="img/icons/circle-x.svg" alt="">
+
+                <p class="my-2 text-sm text-fg-danger text-center py-2">
+                    <span class="font-medium">Something went wrong</span>
+                </p>
+
+            </div>
+            }
+
+
+            <button type="submit"
+                class="text-white bg-brand w-full border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium  rounded-none text-sm px-4 py-2.5 focus:outline-none">Login
+            </button>
+            <label class="flex items-center">
+
+                <p class=" text-gray-400 text-sm m-auto pt-8 font-medium  select-none">Don’t have an account?<a
+                     (click)="signUp()" class="text-fg-brand hover:underline"> Create yours</a></p>
+            </label>
+        </form>
+
+    </div>
+</div>
