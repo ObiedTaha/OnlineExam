@@ -1,1 +1,98 @@
-<p>verify-otp works!</p>
+<section class="min-h-screen  flex items-center justify-center p-4">
+
+
+    <div class=" ">
+
+        <!-- ── Stepper ── -->
+        <div class="flex items-center mb-8" id="stepper">
+            <!-- Step 1: done -->
+            <div class="diamond bg-blue-600"></div>
+            <div class="connector solid"></div>
+
+            <!-- Step 2: active -->
+            <div class="diamond bg-blue-600 ring-4 ring-blue-100"></div>
+            <div class="connector dashed"></div>
+
+            <!-- Step 3: future -->
+            <div class="diamond border-2 border-gray-300 bg-white"></div>
+            <div class="connector dashed"></div>
+
+            <!-- Step 4: future -->
+            <div class="diamond border-2 border-gray-300 bg-white"></div>
+        </div>
+
+        <!-- ── Heading ── -->
+        <h1 class="text-2xl font-bold text-gray-900 mb-1">Create Account</h1>
+        <h2 class="text-lg font-bold text-blue-600 mb-4">Verify OTP</h2>
+        <p class="text-sm text-gray-500 mb-6" style="font-family:monospace;font-size:13px;">
+            Please enter the 6-digit code we have sent to:<br />
+            <span class="text-gray-700">user@example.com.</span>
+            <a routerLink="/auth/signUp" class="text-blue-600 underline ml-1" onclick="return false;">Edit</a>
+        </p>
+
+        <!-- ── OTP Inputs ── -->
+        <div class="flex justify-center gap-3 mb-4" id="otp-group">
+            <input #otpRef class="otp-input" type="text" maxlength="1" (input)="onInput($event, 0)"
+                (keydown)="onKeyDown($event, 0)" (paste)="onPaste($event)" />
+
+            <input #otpRef class="otp-input" type="text" maxlength="1" (input)="onInput($event, 1)"
+                (keydown)="onKeyDown($event, 1)" />
+
+            <input #otpRef class="otp-input" type="text" maxlength="1" (input)="onInput($event, 2)"
+                (keydown)="onKeyDown($event, 2)" />
+
+            <input #otpRef class="otp-input" type="text" maxlength="1" (input)="onInput($event, 3)"
+                (keydown)="onKeyDown($event, 3)" />
+
+            <input #otpRef class="otp-input" type="text" maxlength="1" (input)="onInput($event, 4)"
+                (keydown)="onKeyDown($event, 4)" />
+
+            <input #otpRef class="otp-input" type="text" maxlength="1" (input)="onInput($event, 5)"
+                (keydown)="onKeyDown($event, 5)" />
+        </div>
+
+        <!-- Error message -->
+        <p id="error-msg" class="text-center text-red-500 text-xs mb-3 hidden">Invalid code. Please try again.</p>
+
+        <!-- ── Countdown ── -->
+        <p class="text-center text-gray-400 text-sm mb-8" style="font-family:monospace;font-size:13px;">
+
+            @if (countdown > 0) {
+            You can request another code in:
+            <span class="text-gray-600 font-semibold">{{ countdown }} s</span>
+            } @else {
+            <a href="#" class="text-blue-600 underline" (click)="resendCode(); $event.preventDefault()">
+                Resend code
+            </a>
+            }
+
+        </p>
+        <!-- ── Verify Button ── -->
+        <div class="flex justify-center">
+            <button type="submit" (click)="verifyCode()"
+                class="flex items-center justify-center gap-2 text-gray-500 w-full m-auto  focus:border-0 bg-white focus:ring-4  font-medium  text-sm px-4 py-2.5">
+                Verify Code
+            </button>
+        </div>
+
+
+
+        <!-- ── Success State (hidden initially) ── -->
+        <div id="success-state" class="hidden text-center mt-6">
+            <div class="success-pop inline-flex flex-col items-center gap-2">
+                <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center">
+                    <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <p class="text-green-700 font-semibold text-sm">Account Verified!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End Angular Component -->
+
+
+</section>

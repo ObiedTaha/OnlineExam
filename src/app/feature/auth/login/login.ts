@@ -15,7 +15,7 @@ export class Login {
   router = inject(Router);
 
   loginForm: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required]),
+    username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
   login() {
@@ -33,8 +33,8 @@ export class Login {
   }
 
   signUp() {
-    console.log("singUp");
-    
-    this.router.navigate(['/signUp']);
+    console.log('singUp');
+
+    this.router.navigate(['auth/signUp']);
   }
 }

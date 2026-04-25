@@ -1,0 +1,140 @@
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Stepper diamond */
+.diamond {
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+/* OTP input */
+.otp-input {
+    width: 52px;
+    height: 56px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    color: #111827;
+    background: #fff;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    caret-color: #2563eb;
+}
+
+.otp-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.otp-input.filled {
+    border-color: #9ca3af;
+}
+
+.otp-input.active-current {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Connector line */
+.connector {
+    flex: 1;
+    height: 2px;
+}
+
+.connector.solid {
+    background: #2563eb;
+}
+
+.connector.dashed {
+    background: transparent;
+    border-top: 2px dashed #9ca3af;
+}
+
+/* Verify button */
+.verify-btn {
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.verify-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.verify-btn:active {
+    transform: translateY(0);
+}
+
+/* Resend countdown */
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+}
+
+.pulse {
+    animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+/* Shake animation on wrong code */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    20% {
+        transform: translateX(-6px)
+    }
+
+    40% {
+        transform: translateX(6px)
+    }
+
+    60% {
+        transform: translateX(-4px)
+    }
+
+    80% {
+        transform: translateX(4px)
+    }
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}
+
+/* Success pulse */
+@keyframes success-pop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0
+    }
+
+    60% {
+        transform: scale(1.05)
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.success-pop {
+    animation: success-pop 0.4s ease forwards;
+}
+

@@ -1,32 +1,9 @@
 <div class="h-dvh flex justify-center items-center">
     <div class=" w-xl">
 
-        <form [formGroup]="registerForm">
-            <div class="mb-9">
-                <h3 class="text-3xl font-bold">Create Account</h3>
-            </div>
-            <div class="mb-5">
-                <label for="email" class="block mb-2.5 text-sm  font-medium text-heading">Email</label>
-                <input type="email" id="name" formControlName="email" [class.border-danger]="isInvalid('email')"
-                    class="bg-transparent border   text-heading text-sm rounded-none focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
-                    placeholder="user@example.com" required />
-                @if(registerForm.get("email")?.getError('required')&& registerForm.get('email')?.touched){
-
-                <p class="mt-2.5 text-sm text-fg-danger"><span class="font-medium">Your email is required</span></p>
-                }
-            </div>
-            <button type="submit" [routerLink]=""
-                class="flex items-center justify-center gap-2 text-gray-500 w-full m-auto border border-brand bg-blue-50 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium rounded-none text-sm px-4 py-2.5">
-                Next
-                <i class="pi pi-angle-right"></i>
-            </button>
-
-            <label class="flex items-center">
-                <p class=" text-gray-400 text-sm m-auto pt-8 font-medium  select-none">Already have an account?
-                    <a [routerLink]="'/login'" class="text-fg-brand hover:underline"> Login</a>
-                </p>
-            </label>
-        </form>
+     
+       
+        <router-outlet />
 
     </div>
 </div>
