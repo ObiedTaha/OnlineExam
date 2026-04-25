@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './presonal-info.css',
 })
 export class PresonalInfo {
-
+  submitPersonalInfo() {}
 }

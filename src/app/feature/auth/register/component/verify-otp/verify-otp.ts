@@ -22,7 +22,7 @@ interface OtpControl {
 })
 export class VerifyOTP {
   // ── Config ─
-   DEMO_CODE = '123456';
+  DEMO_CODE = '123456';
   readonly OTP_LENGTH = 6;
   readonly TOTAL_STEPS = 4;
   private _cdr = inject(ChangeDetectorRef);
