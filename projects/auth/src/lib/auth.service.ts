@@ -16,7 +16,7 @@ export class Authservice implements AuthAPI {
   signIn(data: LoginReq): Observable<LoginRes> {
     return this._http.post<LoginRes>(AuthEndPoint.SIGNIN, data).pipe(
       map((res: LoginRes) => this._authAdaptor.adapt(res)),
-      catchError(err => of(err)),
+      catchError((err) => of(err)),
     );
   }
 

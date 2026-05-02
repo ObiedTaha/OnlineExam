@@ -44,12 +44,12 @@ export const routes: Routes = [
         title: 'Exam - personalInfo',
       },
       {
-        path: '',
+        path: 'passwords',
         loadComponent: () =>
-          import('../app/feature/auth/register/component/presonal-info/presonal-info').then(
-            (c) => c.PresonalInfo,
+          import('../app/feature/auth/register/component/passwords/passwords').then(
+            (c) => c.Passwords,
           ),
-        title: 'Exam - personalInfo',
+        title: 'Exam - passwords',
       },
     ],
   },
