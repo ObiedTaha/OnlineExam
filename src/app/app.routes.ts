@@ -1,9 +1,5 @@
-import { email } from '@angular/forms/signals';
+import { ResetPassword } from './feature/auth/forgetpassword/forget-password/reset-password/reset-password';
 import { Routes } from '@angular/router';
-import { Login } from '../app/feature/auth/login/login';
-import { Component } from '@angular/core';
-import { Register } from './feature/auth/register/register';
-import { title } from 'process';
 
 export const routes: Routes = [
   {
@@ -50,6 +46,30 @@ export const routes: Routes = [
             (c) => c.Passwords,
           ),
         title: 'Exam - passwords',
+      },
+      {
+        path: 'forgotPassword',
+        loadComponent: () =>
+          import('../app/feature/auth/forgetpassword/forget-password/forget-password').then(
+            (c) => c.ForgetPassword,
+          ),
+        title: 'Exam - ForgotPassword',
+      },
+      {
+        path: 'resetPassword',
+        loadComponent: () =>
+          import('../app/feature/auth/forgetpassword/forget-password/reset-password/reset-password').then(
+            (c) => c.ResetPassword,
+          ),
+        title: 'Exam - ResetPassword',
+      },
+      {
+        path: 'newPassword',
+        loadComponent: () =>
+          import('../app/feature/auth/forgetpassword/forget-password/new-password/new-password').then(
+            (c) => c.NewPassword,
+          ),
+        title: 'Exam - NewPassword',
       },
     ],
   },

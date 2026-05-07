@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+import { RouterLink } from "@angular/router";
+
+@Component({
+  selector: 'app-new-password',
+  imports: [RouterLink],
+  templateUrl: './new-password.html',
+  styleUrl: './new-password.css',
+})
+export class NewPassword {
+
+}

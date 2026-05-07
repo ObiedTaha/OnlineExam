@@ -37,4 +37,5 @@ export class Login {
 
     this.router.navigate(['auth/signUp']);
   }
+
 }
