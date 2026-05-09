@@ -1,24 +1,12 @@
+import { User } from './user';
+
 export interface LoginReq {
-  username: string;
+  email: string;
   password: string;
 }
 
 export interface LoginRes {
-  user: User;
+  message: string;
   token: string;
-}
-
-export interface User {
-  id: string
-  username: string
-  email: string
-  phone: string
-  firstName: string
-  lastName: string
-  profilePhoto: string
-  emailVerified: boolean
-  phoneVerified: boolean
-  role: string
-  createdAt: string
-  updatedAt: string
+  user: User;
 }

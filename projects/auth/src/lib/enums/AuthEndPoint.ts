@@ -1,7 +1,8 @@
-// this called dictionary pattern
 export class AuthEndPoint {
   static readonly SIGNIN = `https://exam.elevateegy.com/api/v1/auth/signin`;
-  static readonly REGISTER = `https://exam.elevateegy.com/api/v1/auth/signup`;
+  static readonly SEND_EMAIL_VERIFICATION = `https://exam.elevateegy.com/api/v1/auth/send-email-verification`;
+  static readonly CONFIRM_OTP = `https://exam.elevateegy.com/api/v1/auth/confirm-email-verification`;
+  static readonly REGISTER = `https://exam.elevateegy.com/api/v1/auth/register`;
   static readonly CHANGE_PASSWORD = `https://exam.elevateegy.com/api/v1/auth/changePassword`;
   static readonly DELETEACCOUNT = `https://exam.elevateegy.com/api/v1/auth/deleteMe`;
   static readonly EDITPROFILE = `https://exam.elevateegy.com/api/v1/auth/editProfile`;

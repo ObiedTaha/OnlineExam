@@ -1,5 +1,4 @@
-import { NgIf } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -8,7 +7,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { Router } from 'express';
 
 @Component({
   selector: 'app-forget-password',

@@ -29,4 +29,5 @@ export class Email {
       this.registerForm.markAllAsTouched();
     }
   }
+
 }
