@@ -1,14 +1,25 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { DatePickerModule } from 'primeng/datepicker';
+import { Toast } from 'primeng/toast';
 import { RouterOutlet } from '@angular/router';
-import { SideAuth } from "./feature/shared/components/side-auth/side-auth";
-import { Login } from "./feature/auth/login/login";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SideAuth, Login],
+  imports: [RouterOutlet, ButtonModule, FormsModule, InputTextModule, DatePickerModule, Toast],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('Online-Tasks');
+  protected readonly title = signal('exam-app');
+  value: string | undefined;
+  date: Date | undefined;
+  isBrowser: boolean;
+
+  constructor(@Inject(PLATFORM_ID) platformId: object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 }

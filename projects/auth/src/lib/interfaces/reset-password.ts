@@ -1,6 +1,8 @@
 export interface ResetPasswordReq {
   email: string;
-  newPassword: string;
+  newPassword?: string;
+  confirmPassword?: string;
+  token: string;
 }
 
 export interface ResetPasswordRes {

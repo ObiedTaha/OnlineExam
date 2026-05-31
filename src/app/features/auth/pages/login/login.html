@@ -1,0 +1,20 @@
+<section class="auth-section">
+    <h1 class="auth-title">Login</h1>
+    <form class="form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <app-input formControlName="username" label="Username" type="text" placeholder="Username123" />
+
+        <app-input formControlName="password" label="Password" type="password" placeholder="********" />
+
+        <div class="forgot-password">
+            <a routerLink="/auth/reset-password" class="btn-forgot-password">Forgot your password?</a>
+        </div>
+
+        <div class="btn-container">
+            <app-button label="Login" type="submit" [disabled]="loginForm.invalid"></app-button>
+        </div>
+
+        <p class="dont-have-account">
+            Don’t have an account? <a routerLink="/auth/signup">Create yours</a>
+        </p>
+    </form>
+</section>

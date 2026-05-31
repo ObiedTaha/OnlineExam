@@ -1,0 +1,80 @@
+.exams-container {
+  padding: 24px;
+  background: white;
+}
+
+.exams-container .diploma-header {
+  margin-bottom: 32px;
+}
+
+.exams-container .diploma-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.exams-container .exams-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exams-container .no-exams {
+  text-align: center;
+  padding: 80px 0;
+  background: #f8fafc;
+  border-radius: 24px;
+  color: #64748b;
+  font-size: 1.1rem;
+  border: 2px dashed #e2e8f0;
+}
+
+.exams-container .skeleton-list .skeleton-row {
+  display: flex;
+  gap: 24px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.exams-container .skeleton-list .skeleton-row .skeleton-info {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.exams-container .skeleton-list .skeleton-row .skeleton-info ::ng-deep .mb-3 {
+  margin-bottom: 12px !important;
+}
+
+.exams-container .skeleton-list .skeleton-row .skeleton-info ::ng-deep .mb-2 {
+  margin-bottom: 8px !important;
+}
+
+.exams-container .skeleton-list .skeleton-row .skeleton-info ::ng-deep .mb-4 {
+  margin-bottom: 16px !important;
+}
+
+@media (max-width: 768px) {
+  .exams-container {
+    padding: 16px;
+  }
+
+  .exams-container .skeleton-row {
+    flex-direction: column;
+  }
+
+  .exams-container .skeleton-row .p-skeleton:first-child {
+    width: 100% !important;
+    height: 180px !important;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-3 {
+  gap: 12px;
+}

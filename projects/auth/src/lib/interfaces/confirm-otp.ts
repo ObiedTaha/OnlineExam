@@ -4,7 +4,7 @@ export interface ConfirmOTPReq {
 }
 
 export interface ConfirmOTPRes {
-  status: string;
+  status: boolean;
   code: string;
   message: string;
 }

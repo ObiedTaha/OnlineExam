@@ -5,10 +5,10 @@ export interface User {
   lastName: string;
   email: string;
   phone: string;
-  role: string;
-  emailVerified: boolean;
-  phoneVerified: boolean;
-  profilePhoto: string;
-  createdAt: string;
-  updatedAt: string;
+  role?: string;
+  emailVerified?: boolean;
+  phoneVerified?: boolean;
+  profilePhoto?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }

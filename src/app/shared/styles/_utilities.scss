@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+:host {
+    display: flex;
+    height: 100%;
+    flex-shrink: 0;
+}
+html,
+body,
+app-root {
+    margin: 0rem;
+    padding: 0rem;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-family-1);
+}

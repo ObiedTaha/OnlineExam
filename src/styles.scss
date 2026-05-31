@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@use './app/shared/styles/utilities' as utl;
+@use './app/shared/styles/functions' as func;
+@use './app/shared/styles/variables' as vars;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+app-root {
+    display: block;
+    height: 100%;
+}

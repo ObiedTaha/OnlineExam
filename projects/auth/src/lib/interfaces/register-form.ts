@@ -5,8 +5,8 @@ export interface RegisterFormReq {
   firstName: string;
   lastName: string;
   email: string;
-  password: string;
-  rePassword: string;
+  password?: string;
+  confirmPassword?: string;
   phone: string;
 }
 

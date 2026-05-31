@@ -1,7 +1,7 @@
 import { User } from './user';
 
 export interface LoginReq {
-  email: string;
+  username: string;
   password: string;
 }
 

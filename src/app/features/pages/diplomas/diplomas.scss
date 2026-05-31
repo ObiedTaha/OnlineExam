@@ -1,0 +1,105 @@
+.diplomas-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}
+
+.diplomas-container .diplomas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+.diplomas-container .loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.diplomas-container .scroll-to-view-more {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.diplomas-container .scroll-to-view-more:hover {
+  transform: translateY(4px);
+}
+
+.diplomas-container .scroll-to-view-more p {
+  color: var(--gray-600);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0;
+}
+
+.diplomas-container .no-data {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.diplomas-container .skeleton-card {
+  width: 100%;
+  max-width: 336px;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background: #f3f4f6;
+}
+
+.diplomas-container .skeleton-card .skeleton-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  height: 140px;
+  background: rgba(21, 93, 252, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.diplomas-container .skeleton-card .skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* PrimeNG Skeleton Customization */
+::ng-deep .p-skeleton {
+  background-color: #e5e7eb !important;
+}
+
+::ng-deep .p-skeleton::after {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+}
+
+::ng-deep .skeleton-overlay .p-skeleton {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}

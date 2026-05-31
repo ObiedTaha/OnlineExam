@@ -1,0 +1,25 @@
+<!-- Shared Button: supports label, icon (left/right), loading, and disabled states -->
+<button
+    [attr.type]="type"
+    class="btn"
+    [disabled]="disabled || isLoading"
+    [class.btn--loading]="isLoading"
+    (click)="onClick($event)"
+>
+    @if (isLoading) {
+    <div class="loading-wrapper">
+        <div class="spinner"></div>
+        @if (loadingText) {
+        <span>{{ loadingText }}</span>
+        }
+    </div>
+    } @else {
+    <!-- Icon left -->
+    @if (icon && iconPos === 'left') {
+    <i class="pi {{ icon }} btn-icon"></i>
+    } {{ label }}
+    <!-- Icon right -->
+    @if (icon && iconPos === 'right') {
+    <i class="pi {{ icon }} btn-icon"></i>
+    } }
+</button>
