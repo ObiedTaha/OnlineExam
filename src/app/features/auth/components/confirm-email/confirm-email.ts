@@ -12,10 +12,7 @@ import { Button } from '../../../../shared/components/ui/button/button';
 import { InputOtpModule } from 'primeng/inputotp';
 import { AuthStep } from '../../pages/sign-up/sign-up';
 
-/**
- * Presentational component: OTP verification step.
- * Manages a 60-second countdown timer for resend logic.
- */
+
 @Component({
   selector: 'app-confirm-email',
   imports: [Button, InputOtpModule, FormsModule],

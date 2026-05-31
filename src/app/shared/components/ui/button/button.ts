@@ -8,10 +8,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/**
- * Shared reusable button component.
- * Supports loading state, disabled state, and optional leading/trailing icons.
- */
+
 @Component({
   selector: 'app-button',
   imports: [CommonModule],

@@ -9,6 +9,7 @@ export interface EditProfileReq {
 }
 
 export interface EditProfileRes {
+  status: boolean;
   message: string;
   user: User;
 }

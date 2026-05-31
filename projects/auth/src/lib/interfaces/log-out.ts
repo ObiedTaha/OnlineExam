@@ -3,5 +3,7 @@ export interface LogOutReq {
 }
 
 export interface LogOutRes {
+  status: boolean;
+
   message: string;
 }

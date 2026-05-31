@@ -19,6 +19,7 @@ export class AuthAdaptor implements Adaptor {
 
   adapt(data: LoginRes): LoginRes {
     return {
+      status: data.status,
       message: data.message,
       token: data.token,
       user: {
@@ -40,6 +41,7 @@ export class AuthAdaptor implements Adaptor {
 
   adaptRegisterEmailRes(data: RegisterEmailRes): RegisterEmailRes {
     return {
+      status: data.status,
       message: data.message,
     };
   }
@@ -54,6 +56,7 @@ export class AuthAdaptor implements Adaptor {
 
   adaptRegisterFormRes(data: RegisterFormRes): RegisterFormRes {
     return {
+      status: data.status,
       message: data.message,
       user: {
         id: data.user.id,
@@ -74,6 +77,7 @@ export class AuthAdaptor implements Adaptor {
 
   adaptChangePasswordRes(data: ChangePasswordRes): ChangePasswordRes {
     return {
+      status: data.status,
       message: data.message,
       token: data.token,
     };
@@ -87,6 +91,7 @@ export class AuthAdaptor implements Adaptor {
 
   adaptEditProfileRes(data: EditProfileRes): EditProfileRes {
     return {
+      status: data.status,
       message: data.message,
       user: {
         id: data.user.id,
@@ -107,6 +112,7 @@ export class AuthAdaptor implements Adaptor {
 
   adaptForgetPasswordRes(data: ForgetPasswordRes): ForgetPasswordRes {
     return {
+      status: data.status,
       message: data.message,
       resetCode: data.resetCode,
     };
@@ -120,6 +126,7 @@ export class AuthAdaptor implements Adaptor {
 
   adaptResetPasswordRes(data: ResetPasswordRes): ResetPasswordRes {
     return {
+      status: data.status,
       message: data.message,
       token: data.token,
     };
@@ -127,12 +134,14 @@ export class AuthAdaptor implements Adaptor {
 
   adaptLogOutRes(data: LogOutRes): LogOutRes {
     return {
+      status: data.status,
       message: data.message,
     };
   }
 
   adaptGetLoggedUserInfoRes(data: GetLoggedUserInfoRes): GetLoggedUserInfoRes {
     return {
+      status: data.status,
       message: data.message,
       user: {
         id: data.user.id,

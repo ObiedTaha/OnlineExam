@@ -6,6 +6,8 @@ export interface ResetPasswordReq {
 }
 
 export interface ResetPasswordRes {
+  status: boolean;
+
   message: string;
   token: string;
 }

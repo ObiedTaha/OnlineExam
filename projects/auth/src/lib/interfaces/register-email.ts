@@ -3,5 +3,7 @@ export interface RegisterEmailReq {
 }
 
 export interface RegisterEmailRes {
+  status: boolean;
+
   message: string;
 }

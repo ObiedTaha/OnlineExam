@@ -11,6 +11,8 @@ export interface RegisterFormReq {
 }
 
 export interface RegisterFormRes {
+  status: boolean;
+
   message: string;
   user: User;
 }

@@ -89,6 +89,7 @@ export class CreateNewPassword implements OnInit {
         this.isLoading.set(true);
         this.authFacade
           .resetPassword({
+            email: this.authFacade.userEmail()!,
             token: this.token()!,
             newPassword: password!,
             confirmPassword: rePassword!,

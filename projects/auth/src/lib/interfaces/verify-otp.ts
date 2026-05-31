@@ -3,5 +3,5 @@ export interface VerifyOTPReq {
 }
 
 export interface VerifyOTPRes {
-  status: string;
+  status: boolean;
 }

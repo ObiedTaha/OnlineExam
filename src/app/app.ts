@@ -1,20 +1,16 @@
-import { Component, signal, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { ButtonModule } from 'primeng/button';
-import { FormsModule } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
-import { DatePickerModule } from 'primeng/datepicker';
-import { Toast } from 'primeng/toast';
+import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Toast } from 'primeng/toast';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonModule, FormsModule, InputTextModule, DatePickerModule, Toast],
+  imports: [RouterOutlet, Toast],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('exam-app');
+  protected readonly title = signal('Online-Exam');
   value: string | undefined;
   date: Date | undefined;
   isBrowser: boolean;

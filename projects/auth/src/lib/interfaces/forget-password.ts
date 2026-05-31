@@ -3,6 +3,8 @@ export interface ForgetPasswordReq {
 }
 
 export interface ForgetPasswordRes {
+  status: boolean;
+
   message: string;
   resetCode?: string;
 }

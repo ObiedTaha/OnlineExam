@@ -5,6 +5,7 @@ export interface ChangePasswordReq {
 }
 
 export interface ChangePasswordRes {
+  status: boolean;
   message: string;
   token: string;
 }
